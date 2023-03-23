@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { BookTickets } from "./BookTickets";
 import { MovieLists } from "./MovieLists";
 import AppBar from "./AppBar.jsx";
+import { BillingPage } from "./BillingPage.jsx";
 
 import { Loginpage } from "./Loginpage";
 import { useEffect, useState } from "react";
@@ -134,6 +135,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Movies" element={<MovieLists mv={movie} />} />
         <Route path="/Login" element={<Loginpage />} />
+        <Route path="/BillingPage" element={<BillingPage />} />
 
         <Route
           path="/book-tickets"
