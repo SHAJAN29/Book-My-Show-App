@@ -1,12 +1,14 @@
 import { Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
+import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 export function Loginpage() {
   const navigate = useNavigate();
+  const [status, setStatus] = useState("success");
 
   const { values, handleChange, handleSubmit } = useFormik({
-    initialValues: { username: "20", password: "20" },
+    initialValues: { username: "", password: "" },
     onSubmit: async (value) => {
       console.log(value);
       const data = await fetch(
@@ -21,9 +23,13 @@ export function Loginpage() {
       );
       console.log(value);
       const result = await data.json();
-      if (data.status === 401) {
+      if (data.status === 400 && result.token === undefined) {
+        setTimeout(() => {
+          setStatus("error");
+        }, 1000);
         console.log("errorrrrr");
-      } else {
+      } else if (result.token) {
+        setStatus("success");
         console.log(result);
         localStorage.setItem("token", result.token);
         navigate("/Movies");
@@ -54,8 +60,8 @@ export function Loginpage() {
           label="Password"
           variant="outlined"
         />
-        <Button variant="contained" type="submit">
-          Login
+        <Button color={status} variant="contained" type="submit">
+          {status === "success" ? "Login" : "retry"}
         </Button>
       </form>
     </div>

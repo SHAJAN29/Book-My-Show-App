@@ -7,6 +7,7 @@ import AppBar from "./AppBar.jsx";
 
 import { Loginpage } from "./Loginpage";
 import { useEffect, useState } from "react";
+
 function App() {
   // const movie = [
   //   {
@@ -118,13 +119,12 @@ function App() {
   //     id: "109",
   //   },
   // ];
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState([]);
   useEffect(() => {
     fetch("http://localhost:4000/bookingmovie")
       .then((data) => data.json())
       .then((ele) => setMovie(ele));
   }, []);
-
   const pages = ["Home", "Movies", "Contact"];
   const settings = ["Profile", "logout"];
   return (

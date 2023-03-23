@@ -10,3 +10,6 @@ export function MovieLists({ mv }) {
     </div>
   );
 }
+// headers: {
+//   "x-auth-token": localStorage.getItem("token"),
+// },
