@@ -8,8 +8,13 @@ import {
 } from "@mui/material";
 import "./BillingPage.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
+
+// CommonJS
 
 export function BillingPage() {
+  // const Swal = require("sweetalert2");
   const movie = {
     title: "jhon wick chapater-(4) English  ",
     genere: "Romantic",
@@ -47,20 +52,26 @@ export function BillingPage() {
     <div className="paymentDetails">
       <Box sx={{ minWidth: 800 }}>
         <Card variant="outlined" sx={{ height: "400px" }}>
-          <CardContent>
+          <CardContent sx={{ translate: "0 2em" }}>
             <Typography
-              sx={{ fontSize: "30px", textTransform: "capitalize" }}
+              sx={{ fontSize: "35px", textTransform: "capitalize" }}
               color="dark"
               gutterBottom
             >
               {title}
             </Typography>
-            <Typography variant="h6" sx={{ fontSize: "17px" }}>
+            <Typography variant="h5" sx={{ fontSize: "17px" }}>
               {langauge} | {genere} | {certificate} | {glass}
             </Typography>
             <Typography
               variant="h6"
-              sx={{ textTransform: "capitalize", marginTop: 3, mb: 3 }}
+              color={"GrayText"}
+              sx={{
+                fontSize: "18px",
+                textTransform: "capitalize",
+                marginTop: 3,
+                mb: 3,
+              }}
             >
               Date :
               <span>
@@ -69,20 +80,23 @@ export function BillingPage() {
             </Typography>
             <Typography
               variant="h6"
-              sx={{ mb: 3, textTransform: "capitalize" }}
+              color={"GrayText"}
+              sx={{ fontSize: "18px", mb: 3, textTransform: "capitalize" }}
             >
               Theartre: <span> {teatre}</span>
             </Typography>
 
             <Typography
               variant="h6"
-              sx={{ mb: 3, textTransform: "capitalize" }}
+              color={"GrayText"}
+              sx={{ fontSize: "18px", mb: 3, textTransform: "capitalize" }}
             >
               Screen: <span> {screen}</span>
             </Typography>
             <Typography
               variant="h6"
-              sx={{ mb: 3, textTransform: "capitalize" }}
+              color={"GrayText"}
+              sx={{ fontSize: "18px", mb: 3, textTransform: "capitalize" }}
             >
               Seat: <span> {seat}</span>
             </Typography>
@@ -90,7 +104,7 @@ export function BillingPage() {
         </Card>
       </Box>
       <Box minWidth={300}>
-        <Card sx={{ height: "400px" }}>
+        <Card variant="outlined" sx={{ height: "400px" }}>
           <Typography
             gutterBottom
             sx={{
@@ -135,6 +149,28 @@ export function BillingPage() {
               ₹{calculeteGST(ticketsPerHead, numoforders)}
             </Typography>
           </Box>
+          <hr />
+
+          <Box
+            sx={{
+              padding: "20px 20px",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Typography>Total</Typography>
+            <Typography color={"error"}>
+              ₹{calculeteGSTwithTotel(ticketsPerHead, numoforders)}
+            </Typography>
+          </Box>
+
+          <Button
+            variant="contained"
+            sx={{ width: "100%", translate: "0px 4.5rem" }}
+            onClick={selfi}
+          >
+            conform
+          </Button>
         </Card>
       </Box>
     </div>
@@ -145,4 +181,14 @@ function calculeteGST(price, qty, gst) {
   var reeta = price * qty;
   var tot_price = (reeta * 18) / 100;
   return tot_price;
+}
+
+function calculeteGSTwithTotel(price, qty, gst) {
+  var reeta = price * qty;
+  var tot_price = (reeta * 18) / 100 + reeta;
+  return tot_price;
+}
+
+function selfi() {
+  Swal.fire("Conformed!", "Ticket Booking conformed check Your Mail", "error");
 }
