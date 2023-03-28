@@ -5,12 +5,15 @@ import { BookTickets } from "./BookTickets";
 import { MovieLists } from "./MovieLists";
 import AppBar from "./AppBar.jsx";
 import { BillingPage } from "./BillingPage.jsx";
-
+import { MovieDetailsPage } from "./MovieDetailsPage.jsx";
+// import { Trailer } from "./Trailer.jsx";
 import { Loginpage } from "./Loginpage";
 import { useEffect, useState } from "react";
+import { Trailer } from "./Trailer";
 
 function App() {
   // const movie = [
+
   //   {
   //     id: "99",
   //     name: "Vikram",
@@ -126,8 +129,10 @@ function App() {
       .then((data) => data.json())
       .then((ele) => setMovie(ele));
   }, []);
+
   const pages = ["Home", "Movies", "Contact"];
   const settings = ["Profile", "logout"];
+
   return (
     <div className="App">
       <AppBar pages={pages} setting={settings} />
@@ -136,6 +141,8 @@ function App() {
         <Route path="/Movies" element={<MovieLists mv={movie} />} />
         <Route path="/Login" element={<Loginpage />} />
         <Route path="/BillingPage" element={<BillingPage />} />
+        <Route path="/movie-details/:id" element={<MovieDetailsPage />} />
+        <Route path="/trailer/:id" element={<Trailer />} />
 
         <Route
           path="/book-tickets"

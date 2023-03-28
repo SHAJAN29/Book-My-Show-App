@@ -1,0 +1,178 @@
+const movie = [
+  {
+    id: "99",
+    title: "vikrem",
+    poster: "https://wallpapercave.com/dwp1x/wp11157463.jpg",
+    genere: "Action crime",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "thursday 25 march",
+    summery:
+      "A special agent investigates a murder committed by a masked group of serial killers. However, a tangled maze of clues soon leads him to the drug kingpin of Chennai.",
+    trailer: "https://www.youtube.com/embed/NXSigiaZ0W0",
+    duration: "2h:54m",
+    teaters1: { cinimas: "ganga cinimas", showtime: [10, 12, 1, 3] },
+  },
+
+  {
+    id: "100",
+    name: "RRR",
+    poster:
+      "https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG",
+    rating: 8.8,
+    genere: " Action/Drama",
+    glass: "2D",
+    certificate: "A",
+    langauge: "Telugu",
+    releseDate: "24 March 2022 25 march",
+    summary:
+      "RRR is an upcoming Indian Telugu-language period action drama film directed by S. S. Rajamouli, and produced by D. V. V. Danayya of DVV Entertainments.",
+    trailer: "https://www.youtube.com/embed/f_vbAtFSEc0",
+    duration: "3h:2m",
+    teaters1: { cinimas: "manga cinimas", showtime: [10, 12, 1, 3] },
+  },
+  {
+    id: "101",
+    name: "Iron man 2",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_FMjpg_UX1000_.jpg",
+    rating: 7,
+    genere: "Action/Sci-fi",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: " 7 May 2010 (India)",
+    summary:
+      "Iron Man 2 is a 2010 American superhero film based on the Marvel Comics character Iron Man. Produced by Marvel Studios and distributed by Paramount Pictures.",
+    trailer: "https://www.youtube.com/embed/wKtcmiifycU",
+    duration: "2h:4m",
+  },
+  {
+    id: "102",
+    name: "No Country for Old Men",
+    poster:
+      "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
+    rating: 8.1,
+    genere: "Crime/Thriller",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "9 November 2007 (USA)",
+    summary:
+      "A hunter's life takes a drastic turn when he discovers two million dollars while strolling through the aftermath of a drug deal. He is then pursued by a psychopathic killer who wants the money.",
+    trailer: "https://www.youtube.com/embed/38A__WT3-o0",
+    duration: "2h:2m",
+  },
+  {
+    id: "103",
+    name: "Jai Bhim",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BY2Y5ZWMwZDgtZDQxYy00Mjk0LThhY2YtMmU1MTRmMjVhMjRiXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_FMjpg_UX1000_.jpg",
+    summary:
+      "A tribal woman and a righteous lawyer battle in court to unravel the mystery around the disappearance of her husband, who was picked up the police on a false case",
+    rating: 8.8,
+    genere: "Legal drama/Mystery",
+    glass: "2D",
+    certificate: "A",
+    langauge: "Tamil",
+    releseDate: "2 November 2021",
+    trailer: "https://www.youtube.com/embed/nnXpbTFrqXA",
+    duration: "2h:45m",
+  },
+
+  {
+    id: "104",
+    name: "The Avengers",
+    rating: 8,
+    summary:
+      "Marvel's The Avengers (classified under the name Marvel Avengers\n Assemble in the United Kingdom and Ireland), or simply The Avengers, is\n a 2012 American superhero film based on the Marvel Comics superhero team\n of the same name.",
+    poster:
+      "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg",
+    trailer: "https://www.youtube.com/embed/eOrNdBpGMv8",
+    genere: "Adventure/Action",
+    glass: "3D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "27 April 2012 (India)",
+    duration: "2h:23m",
+  },
+  {
+    id: "105",
+    name: "Interstellar",
+    poster: "https://m.media-amazon.com/images/I/A1JVqNMI7UL._SL1500_.jpg",
+    rating: 8.6,
+    summary:
+      "When Earth becomes uninhabitable in the future, a farmer and ex-NASA\n pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team\n of researchers, to find a new planet for humans.",
+    trailer: "https://www.youtube.com/embed/zSWdZVtXT7E",
+    genere: "Sci-fi/Adventure",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "7 November 2014 (India)",
+    duration: "2h:49m",
+  },
+  {
+    id: "106",
+    name: "Baahubali",
+    poster: "https://flxt.tmsimg.com/assets/p11546593_p_v10_af.jpg",
+    rating: 8,
+    summary:
+      "In the kingdom of Mahishmati, Shivudu falls in love with a young warrior woman. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy.",
+    trailer: "https://www.youtube.com/embed/sOEg_YZQsTI",
+    genere: " Action/War",
+    glass: "2D",
+    certificate: "A",
+    langauge: "Tamil",
+    releseDate: "10 July 2015 (India)",
+    duration: "2h:38m",
+  },
+  {
+    id: "107",
+    name: "Ratatouille",
+    poster:
+      "https://resizing.flixster.com/gL_JpWcD7sNHNYSwI1ff069Yyug=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzc4ZmJhZjZiLTEzNWMtNDIwOC1hYzU1LTgwZjE3ZjQzNTdiNy5qcGc=",
+    rating: 8,
+    summary:
+      "Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him.",
+    trailer: "https://www.youtube.com/embed/NgsQ8mVkN8w",
+    genere: " Family/Comedy",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "29 June 2007 (USA)",
+    duration: "1h:51m",
+  },
+  {
+    id: "108",
+    name: "PS2",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYjFjMTQzY2EtZjQ5MC00NGUyLWJiYWMtZDI3MTQ1MGU4OGY2XkEyXkFqcGdeQXVyNDExMjcyMzA@._V1_.jpg",
+    summary:
+      "Ponniyin Selvan: I is an upcoming Indian Tamil-language epic period action film directed by Mani Ratnam, who co-wrote it with Elango Kumaravel and B. Jeyamohan",
+    rating: 8,
+    trailer: "https://www.youtube.com/embed/KsH2LA8pCjo",
+    genere: "Action/Adventure",
+    glass: "2D",
+    certificate: "A",
+    langauge: "Tamil",
+    releseDate: "30 September 2022 (India)",
+    duration: "2h:50m",
+  },
+  {
+    id: "109",
+    name: "Thor: Ragnarok",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_.jpg",
+    summary:
+      "When Earth becomes uninhabitable in the future, a farmer and ex-NASA\\n pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team\\n of researchers, to find a new planet for humans.",
+    rating: 8.8,
+    trailer: "https://youtu.be/NgsQ8mVkN8w",
+    genere: "Action/Sci-fi",
+    glass: "2D",
+    certificate: "A",
+    langauge: "English",
+    releseDate: "3 November 2017 (India)",
+    duration: "2h:10m",
+  },
+];

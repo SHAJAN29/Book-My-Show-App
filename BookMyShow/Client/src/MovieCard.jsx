@@ -9,7 +9,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export function MovieCard({ mov }) {
-  const { name, poster, summary, rating } = mov;
+  const { name, poster, summary, rating, id } = mov;
   const navigate = useNavigate();
 
   const styles = {
@@ -35,7 +35,7 @@ export function MovieCard({ mov }) {
         <Typography size="small" style={styles}>
           Rating:{rating}
         </Typography>
-        <Button size="small" onClick={() => navigate("/book-tickets")}>
+        <Button size="small" onClick={() => navigate(`/movie-details/${id}`)}>
           Book Now
         </Button>
       </CardActions>

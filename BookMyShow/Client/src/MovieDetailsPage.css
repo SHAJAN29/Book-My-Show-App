@@ -1,0 +1,54 @@
+.movieDetailsPage{
+  
+padding-left: 0%;
+margin: 0%;
+}
+
+.Top_page {
+    margin: 0%;
+transform: translateY(-14em);
+padding: 0%;
+background-color: aqua;
+position: relative;
+width: 1960px;
+height: 510px;
+overflow: hidden;
+padding-left: 0%;
+}
+
+
+
+.Top_page img {
+
+    padding-left: 0%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+
+}
+.ToppageContent {
+
+width: 800px;
+height:320px;
+
+}
+.ToppageContentImages {
+
+background-color: yellow;
+width: 220px;
+height: 100%;
+object-fit: cover;
+overflow: hidden;
+border: 6px solid #fff;
+
+}
+
+.ToppageContentImages img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+    
+}
+
+

@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import "./BillingPage.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -46,7 +39,8 @@ export function BillingPage() {
     orderPrice,
     ticketsPerHead,
   } = movie;
-  const navigate = useNavigate();
+
+  // const navigate = useNavigate();
 
   return (
     <div className="paymentDetails">
@@ -166,7 +160,7 @@ export function BillingPage() {
 
           <Button
             variant="contained"
-            sx={{ width: "100%", translate: "0px 4.5rem" }}
+            sx={{ width: "100%", translate: "0px 6.5rem" }}
             onClick={selfi}
           >
             conform
@@ -190,5 +184,9 @@ function calculeteGSTwithTotel(price, qty, gst) {
 }
 
 function selfi() {
-  Swal.fire("Conformed!", "Ticket Booking conformed check Your Mail", "error");
+  Swal.fire(
+    "Conformed!",
+    "Ticket Booking conformed check Your Mail",
+    "success"
+  );
 }
